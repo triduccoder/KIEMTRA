@@ -7,11 +7,29 @@
     <title>Document</title>
 </head>
 <body>
+    <form method="post">
+
+    
     <h1>hello</h1>
     <label>TenDangNhap</label>
-    <input type="text" name="username" id="txtUsername" />
+    <input type="text" name="username" id="username" />
     <label>MatKhau</label>
-    <input type="password" name="matkhau" id="txtPassword"  />
-    <button> Login </button>
+    <input type="password" name="matkhau" id="matkhau"  />
+    <button type="button" onclick="document.getElementById('btn').alert(DN())" id="btn">Dang Nhap</button>
+
+    </form>
+    <script>
+        function DN(){
+            var u = document.getElementById("username").value;
+            var y = document.getElementById("matkhau").value;
+            var btn = document.getElementById("btn").value;
+            
+            if(u === "admin" && y === "admin"){
+                alert("login success!!!")
+            }else{
+                alert("login wrong!!!")
+            }
+        }
+    </script>
 </body>
 </html>
